@@ -27,8 +27,8 @@ export default async function Home() {
   const mainNews = section[0].articles
 
   const othersSection  = section.slice(1)
-  console.log('others page er data', othersSection)
-  const filterOtherSection:IotherSection[] = othersSection.filter((others:IotherSection, index:number) => {
+  // console.log('others page er data', othersSection)
+  const filterOtherSection:IotherSection[] = othersSection.filter((_:IotherSection, index:number) => {
   return index !== 1 && index !== 9 && index !== 3;
 });
 
@@ -55,7 +55,7 @@ export default async function Home() {
               }>
 
                 <h1 className="font-bold border-b-2 border-red-600 py-2 text-2xl">{others.title}</h1>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-3 gap-3 items-stretch">
                   {
                     others.articles.map(news => <NewsCard key={news.id} news={news}></NewsCard>)
 

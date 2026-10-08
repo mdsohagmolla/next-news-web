@@ -1,4 +1,5 @@
 import NewsCard, { Inews } from '@/components/NewsCard';
+import { notFound } from 'next/navigation';
 import React from 'react';
  export interface Iparams{
     params: Promise<{
@@ -14,6 +15,11 @@ const CategoriNews = async({params}:Iparams) => {
 
     const data = await res.json()
     const categoriNews:Inews[] = data.data
+
+    // not found setup
+    if(!categoriNews){
+        notFound()
+    }
     
     console.log('categori er data',categoriNews)
     return (

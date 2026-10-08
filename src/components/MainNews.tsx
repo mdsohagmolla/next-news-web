@@ -15,12 +15,12 @@ const MainNews = ({ news }: { news: News[] }) => {
     const firstNews = news[0]
 
     const otherNews = news.slice(1)
-    console.log('otherNews news', firstNews)
+    // console.log('otherNews news', firstNews)
     return (
         <div className='flex gap-4 mt-5 ml-3'>
 
             <Link href={`/news/${firstNews.id}`}>
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 w-100 shadow-sm">
                     <figure>
                         <Image src={firstNews.
                             imageUrl
@@ -43,7 +43,7 @@ const MainNews = ({ news }: { news: News[] }) => {
 
             {/* headline */}
 
-            <div className='grid gap-2 '>
+            <div className='grid gap-2'>
 
 
                 {

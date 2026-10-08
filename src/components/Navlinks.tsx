@@ -11,7 +11,7 @@ const Navlinks = async () => {
     const filternavs = navs.filter(n => n.scrapable)
 
     return (
-        <div className='flex justify-center gap-3 mb-2'>
+        <div className='flex justify-center gap-3 mb-2 '>
            
            <Link  href={'/'}>হোম
 </Link>

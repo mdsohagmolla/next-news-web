@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+
  export interface Inews{
     imageUrl: string,
     imageAlt:string,
@@ -16,8 +16,8 @@ const NewsCard = ({news}:{news:Inews}) => {
     return (
        <Link href={`/news/${news.id}`}>
         <div className='mt-3 '>
-            <div className="card bg-base-100  shadow-sm h-full  overflow-hidden">
-                            <figure >
+            <div className="card bg-base-100  shadow-sm   overflow-hidden  ">
+                            <figure className='w-full h-52'>
                                 <Image src={news.
                                     imageUrl
                                 }
@@ -29,9 +29,9 @@ const NewsCard = ({news}:{news:Inews}) => {
                                 </Image>
                             </figure>
                             <div className="card-body">
-                                <p className='text-red-700 font-semibold'>{news.category}</p>
-                                <h2 className="card-title">{news.title}</h2>
-                                <p>{news.description
+                                <p className='text-red-700 font-semibold '>{news.category}</p>
+                                <h2 className="card-title hover:text-red-500 line-clamp-3">{news.title}</h2>
+                                <p className='line-clamp-2 '>{news.description
                                 }</p> 
             
                             </div>

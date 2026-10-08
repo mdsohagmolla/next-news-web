@@ -8,11 +8,21 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'ichef.bbci.co.uk'
+        hostname: 'ichef.bbci.co.uk',
+        
+
+      },
+       {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        
 
       }
-    ]
+    ],
+    
   }
 };
+
+
 
 export default nextConfig;

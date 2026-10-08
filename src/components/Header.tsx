@@ -1,5 +1,7 @@
 import Image from 'next/image';
+
 import React from 'react';
+import UserInfo from './userInfo';
 
 const Header = () => {
     const today = new Date()
@@ -37,15 +39,7 @@ const Header = () => {
         </div>
 
         {/* Right - Authentication Buttons */}
-        <div className="flex justify-end items-center gap-2">
-          <button className="px-3 py-2 text-md">
-            সাইন ইন
-          </button>
-
-          <button className="rounded-md bg-red-600 px-4 py-2 text-md font-semibold text-white hover:bg-red-700">
-            সাইন আপ
-          </button>
-        </div>
+        <UserInfo></UserInfo>
 
       </div>
     </header>
